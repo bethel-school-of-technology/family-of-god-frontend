@@ -18,7 +18,8 @@ function PrayerRequest() {
   }
 
   const getPrayerRequest = () => {
-    Axios.get("http://localhost:3000/prayerrequest", {
+    const newRequest = { prayerRequestTitle, prayerRequestBody, commentBody };
+    Axios.get("http://localhost:3000/prayerrequest", newRequest, {
       withCredentials: true,
     }).then((response) => {
       console.log(response);
@@ -27,13 +28,23 @@ function PrayerRequest() {
   };
 
   const updatePrayerRequest = (id) => {
-    Axios.put("http://localhost:3000/update", {
-      PrayerRequest: newPrayerRequest,
-      id: id,
+    const newRequest = { prayerRequestTitle, prayerRequestBody};
+    Axios.get("http://localhost:3000/prayerrequest/update", newRequest, {
+      withCredentials: true,
     }).then((response) => {
       alert("Updated PrayerRequest");
+      setPrayerRequest(response.data.prayerrequest);
     });
   };
+
+  // const updatePrayerRequest = (id) => {
+  //   Axios.put("http://localhost:3000/update", {
+  //     PrayerRequest: newPrayerRequest,
+  //     id: id,
+  //   }).then((response) => {
+  //     alert("Updated PrayerRequest");
+  //   });
+  // };
 
   function DeletePrayerRequest(id) {
     Axios.delete(`http://localhost:3000/delete/${id}`);
@@ -76,7 +87,8 @@ function PrayerRequest() {
           </div>
 
           //    )
-        ))}
+        )
+        )}
         {PrayerRequest.map((val, key) => {
           return (
             <div className="PrayerRequest">
