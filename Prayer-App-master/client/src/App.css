@@ -1,37 +1,40 @@
 .App {
- display: flex;
- flex-direction: column;
- justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.information{
-  display:flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+.information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 .information input {
-  width: 300px;
-  height: 50px;
-font-size: 20px;
-padding-left: 10px;
-margin: 5px;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin: 5px;
 }
 
 .button {
-width: 300px;
-height: 50px;
-margin-top: 15px;
+    width: 300px;
+    height: 50px;
+    margin-top: 15px;
 }
 
-.button: :hover {
- cursor: pointer;
+.button :hover {
+    cursor: pointer;
 }
 
 .PrayerRequest {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
 }
