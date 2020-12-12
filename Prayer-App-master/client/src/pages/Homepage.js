@@ -1,16 +1,20 @@
 import "./Homepage.css";
 import { useState } from "react";
 import { components } from "react";
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Container from 'react-bootstrap/Container';
 
 function Homepage() {
   return (
-    <div className="App">
-      <div className="home">
-        <h1>Welcome to Family of God Prayer app!</h1>
-        <br></br>
-        <h2>Please Log in or register</h2>
-      </div>
-    </div>
+    <Jumbotron fluid>
+  <Container>
+    <h1>Welcome to Family of God prayer app!</h1>
+    <p>
+      This prayer app allows you to add a prayer request. People can pray for you and comment.
+      Please sign up. Or login if you are already a user. 
+    </p>
+  </Container>
+</Jumbotron>
     
   );
 }

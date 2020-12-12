@@ -1,0 +1,19 @@
+@media all and (min-width: 480px) {
+    .details {
+        padding: 60px 0;
+    }
+    .details form {
+        margin: 0 auto;
+        max-width: 60vw;
+    }
+    h2 {
+        margin: 0 auto;
+        max-width: 60vw;
+    }
+    .info {
+        color: darkslategray;
+        max-width: 60vw;
+        text-align: left;
+        padding-left: 2em;
+    }
+}
